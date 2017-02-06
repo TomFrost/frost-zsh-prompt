@@ -2,7 +2,7 @@
 
 > Distinct, informative, and fast ZSH prompt
 
-<img src="screenshot.png" width="864">
+<img src="screenshot.png" width="800">
 
 ## Overview
 
@@ -14,6 +14,7 @@ It's also based on the incredible [Pure](https://github.com/sindresorhus/pure) f
 
 - Comes with the _actual_ perfect prompt character.
   [Pure](https://github.com/sindresorhus/pure) author has no idea what he's talking about.
+- Works independently of any frameworks. You don't need oh-my-zsh or prezto bloat to run Frost.
 - Shows `git` branch and whether it's dirty or clean (with a `✱` or a `✔`).
 - Indicates when you have unpushed/unpulled `git` commits with up/down arrows. *(Check is done asynchronously!)*
 - Shows a right-prompt with the last command's exit code if it wasn't `0`.
