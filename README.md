@@ -105,7 +105,7 @@ For the default emacs mode, this defines the prompt symbol. For vi mode, this is
 
 ### `FROST_PCHAR_NORMAL`
 
-For vi mode, this is the prompt symbol used in normal mode. The default value is `⍟`.
+For vi mode, this is the prompt symbol used in normal mode. The default value is `⊙`.
 
 ### `FROST_GIT_DOWN_ARROW`
 

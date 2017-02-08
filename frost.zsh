@@ -35,7 +35,7 @@ prompt_frost_colors=(
     "${prompt_frost_nocolor}%F{yellow}%{$terminfo[bold]%}"
 )
 prompt_frost_inschar=${FROST_PCHAR_INSERT:-➤}
-prompt_frost_normchar=${FROST_PCHAR_NORMAL:-⍟}
+prompt_frost_normchar=${FROST_PCHAR_NORMAL:-⊙}
 prompt_frost_pchar=${prompt_frost_inschar}
 
 # turns seconds into human readable time
