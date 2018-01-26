@@ -1,7 +1,7 @@
 # Frost
 # Tom Shawver
 # MIT License
-# Based on frost by Sindre Sorhus
+# Based on Pure by Sindre Sorhus
 
 # For my own and others sanity
 # git:
