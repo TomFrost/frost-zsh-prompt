@@ -38,7 +38,8 @@ prompt_frost_inschar=${FROST_PCHAR_INSERT:-➤}
 prompt_frost_normchar=${FROST_PCHAR_NORMAL:-⊙}
 prompt_frost_pchar=${prompt_frost_inschar}
 prompt_frost_gitcleanchar=${FROST_GIT_CLEAN_CHAR:-✔}
-prompt_frost_gitdirtychar=${FORST_GIT_DIRTY_CHAR:-✱}
+prompt_frost_gitdirtychar=${FROST_GIT_DIRTY_CHAR:-✱}
+prompt_frost_retcodechar=${FROST_RETCODE_CHAR:-↵}
 
 # turns seconds into human readable time
 # 165392 => 1d 21h 56m 32s
@@ -383,7 +384,7 @@ prompt_frost_generate() {
     PROMPT="${prompt_frost_colors[1]}╰─${promptcolor}${prompt_frost_pchar}${prompt_frost_nocolor} "
 
     # Set a right prompt with the non-zero exit code
-    RPROMPT='%(?..${prompt_frost_colors[5]}%? ↵${prompt_frost_nocolor})'
+    RPROMPT='%(?..${prompt_frost_colors[5]}%? ${prompt_frost_retcodechar}${prompt_frost_nocolor})'
 }
 
 prompt_frost_setup() {
