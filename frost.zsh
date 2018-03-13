@@ -37,6 +37,8 @@ prompt_frost_colors=(
 prompt_frost_inschar=${FROST_PCHAR_INSERT:-➤}
 prompt_frost_normchar=${FROST_PCHAR_NORMAL:-⊙}
 prompt_frost_pchar=${prompt_frost_inschar}
+prompt_frost_gitcleanchar=${FROST_GIT_CLEAN_CHAR:-✔}
+prompt_frost_gitdirtychar=${FORST_GIT_DIRTY_CHAR:-✱}
 
 # turns seconds into human readable time
 # 165392 => 1d 21h 56m 32s
@@ -325,7 +327,7 @@ prompt_frost_async_tasks() {
     if (( time_since_last_dirty_check > ${FROST_GIT_DELAY_DIRTY_CHECK:-1800} )); then
         unset prompt_frost_git_last_dirty_check_timestamp
         # check check if there is anything to pull
-        async_job "prompt_frost" prompt_frost_async_git_dirty ${frost_GIT_UNTRACKED_DIRTY:-1} $working_tree
+        async_job "prompt_frost" prompt_frost_async_git_dirty ${FROST_GIT_UNTRACKED_DIRTY:-1} $working_tree
     fi
 }
 
@@ -348,9 +350,9 @@ prompt_frost_async_callback() {
         prompt_frost_async_git_dirty)
             local prev_dirty=$prompt_frost_git_dirty
             if (( code == 0 )); then
-                prompt_frost_git_dirty="${prompt_frost_colors[3]}✔${prompt_frost_nocolor}"
+                prompt_frost_git_dirty="${prompt_frost_colors[3]}${prompt_frost_gitcleanchar}${prompt_frost_nocolor}"
             else
-                prompt_frost_git_dirty="${prompt_frost_colors[6]}✱${prompt_frost_nocolor}"
+                prompt_frost_git_dirty="${prompt_frost_colors[6]}${prompt_frost_gitdirtychar}${prompt_frost_nocolor}"
             fi
 
             [[ $prev_dirty != $prompt_frost_git_dirty ]] && prompt_frost_preprompt_render
