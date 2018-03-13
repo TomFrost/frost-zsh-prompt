@@ -107,6 +107,10 @@ For the default emacs mode, this defines the prompt symbol. For vi mode, this is
 
 For vi mode, this is the prompt symbol used in normal mode. The default value is `⊙`.
 
+### `FROST_RETCODE_CHAR`
+
+The symbol shown alongside the non-zero exit code. The default value is `↵`.
+
 ### `FROST_GIT_DOWN_ARROW`
 
 Defines the git down arrow symbol. The default value is `⇣`.
@@ -114,6 +118,14 @@ Defines the git down arrow symbol. The default value is `⇣`.
 ### `FROST_GIT_UP_ARROW`
 
 Defines the git up arrow symbol. The default value is `⇡`.
+
+### `FROST_GIT_CLEAN_CHAR`
+
+Defines the symbol denoting a clean git tree. The default value is `✔`.
+
+### `FROST_GIT_DIRTY_CHAR`
+
+Defined the symbol denoting a dirty git tree. The default value is `✱`.
 
 ## Example
 
